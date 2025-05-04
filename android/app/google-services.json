@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782447481056",
+    "project_id": "genfit-94db6",
+    "storage_bucket": "genfit-94db6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782447481056:android:971b783380ca493a424085",
+        "android_client_info": {
+          "package_name": "com.example.gen_fit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3E6gyhHiFe-kl2kYGuv3elYOq7chcs00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
