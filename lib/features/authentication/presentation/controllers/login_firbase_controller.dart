@@ -5,6 +5,7 @@ import 'package:gen_fit/core/error_handling/failure.dart';
 import 'package:gen_fit/core/utils/app_constants/texts/app_authentication_texts_expanded.dart';
 import 'package:gen_fit/database_sqflite.dart';
 import 'package:gen_fit/features/ai_workout_recommendication/presentation/screens/home_screen2.dart';
+import 'package:gen_fit/features/authentication/presentation/screens/login_screen.dart';
 import 'package:gen_fit/features/authentication/presentation/screens/signup_screen.dart';
 import 'package:get/get.dart';
 import '../../../../core/router/app_routes.dart';
@@ -141,7 +142,7 @@ class LoginFirebaseController extends GetxController {
       if (auth.currentUser != null) {
         await auth.signOut();
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SignupScreen()));
+            context, MaterialPageRoute(builder: (context) => LoginScreen()));
       }
     } catch(e){
       print(Failure(errorMessage: e.toString()));

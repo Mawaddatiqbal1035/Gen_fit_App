@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:gen_fit/core/router/app_routes.dart';
+import 'package:gen_fit/core/shared_features/theme_management/domain/repositories/theme_repository.dart';
+import 'package:gen_fit/core/shared_features/theme_management/domain/usecase/theme_usecase.dart';
 import 'package:gen_fit/features/ai_workout_recommendication/data/data-sources/exercise_api_data_source.dart';
 import 'package:gen_fit/features/authentication/presentation/screens/forget_screen.dart';
 import 'package:gen_fit/features/authentication/presentation/screens/signup_screen.dart';
@@ -43,7 +45,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Obx((){
       final x=Get.find<ThemeController2>();
          return GetMaterialApp(
@@ -53,7 +54,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home:  Obx((){
       final onboard=Get.find<OnBoardGetController>();
-      return onboard.isLogin.value==true ?HomeScreen2():HomeScreen2();
+      return onboard.isLogin.value==true ?HomeScreen2():OnBoardScreen();
       }));});
 
   }

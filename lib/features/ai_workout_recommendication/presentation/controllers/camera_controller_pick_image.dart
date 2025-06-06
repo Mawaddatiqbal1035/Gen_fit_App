@@ -4,6 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
 
 class CameraControllerPickImage extends GetxController {
+  File? imageFile;
   File? file;
   late final FaceDetector _faceDetector;
   var isProcessing = false.obs;
@@ -65,12 +66,12 @@ class CameraControllerPickImage extends GetxController {
   }
 
   pickImageDrawer(ImageSource imageSource)async {
-    final fileImage = await ImagePicker().pickImage(source: imageSource);
+  final fileImage = await ImagePicker().pickImage(source: imageSource);
     if (fileImage == null) {
       return "No image selected";
     }else{
-      file = File(fileImage.path);
-      return file;
+      imageFile = File(fileImage.path);
+      return imageFile;
     }
   }
 }

@@ -25,8 +25,11 @@ class GeminiController extends GetxController {
         final result = await model.generateContent([
           Content.model([
             DataPart(
-              "Identify the exercise in the image and return ONLY the name of the exercise. Examples: push-ups, squats, lunges, plank, bicep curls, etc. "
-                  "Do not add any extra words, titles, or descriptions. Just return the exact exercise name.",
+              "Identify the exercise in the image and return ONLY the name of the "
+                  "exercise. Examples: push-ups, squats, lunges, plank, bicep curls, "
+                  "etc. "
+                  "Do not add any extra words, titles, or descriptions. Just return "
+                  "the exact exercise name.",
               imageBytes,
             )
           ])

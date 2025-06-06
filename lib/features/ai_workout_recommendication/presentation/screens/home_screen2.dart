@@ -252,7 +252,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
   }
   Future<void> fetchYouTubeVideos(String exercise) async {
     String apiKey = "AIzaSyAZ-xy21dRcNUCEOqxFbNw1paI4K1phkms";
-    String formattedQuery = "$exercise of fitness gim workouts every person have different exercise of fitness";  // 👈 Ensure relevant videos
+    String formattedQuery = "$exercise of fitness gim workouts every person have different exercise of fitness";
     String url =
         "https://www.googleapis.com/youtube/v3/search?part=snippet&q=$formattedQuery&type=video&maxResults=200&key=$apiKey";
 

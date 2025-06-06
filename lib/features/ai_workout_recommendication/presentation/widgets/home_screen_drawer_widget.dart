@@ -3,6 +3,7 @@ import 'package:either_dart/either.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gen_fit/controllers/onBoard_get_controller.dart';
+import 'package:gen_fit/core/utils/app_constants/colors/app_colors.dart';
 import 'package:gen_fit/database_sqflite.dart';
 import 'package:gen_fit/features/ai_workout_recommendication/presentation/controllers/camera_controller_pick_image.dart';
 import 'package:get/get.dart';
@@ -38,7 +39,7 @@ class HomeScreenDrawerWidget extends StatelessWidget {
                             
                            // backgroundImage:imageController.file!=null?FileImage(File(imageController.file!.path)):null,
                           radius: 40,
-                          child: imageController.file!=null? Image.file(File(imageController.file!.path),fit: BoxFit.cover,):Icon(Icons.person, size: 55),
+                          child: imageController.imageFile!=null? Image.file(File(imageController.imageFile!.path),fit: BoxFit.fill):Icon(Icons.person, size: 55),
                         ),
 
                           Positioned(
@@ -49,7 +50,7 @@ class HomeScreenDrawerWidget extends StatelessWidget {
                               width: 25,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Colors.blue,
+                                color: AppColors.lightPrimary,
                                 border: Border.all(color: Colors.white, width: 2),
                               ),
                               child: GestureDetector(
